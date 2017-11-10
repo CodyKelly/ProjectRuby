@@ -1,10 +1,10 @@
-#include <SFML/Audio.hpp>
-#include <SFML/Graphics.hpp>
-
-#include "ResourcePath.hpp"
+#include "Control.hpp"
 
 int main()
 {
+    Control control;
+    
+    control.main();
     
     return 0;
 }

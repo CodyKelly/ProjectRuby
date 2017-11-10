@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C382682B1FB5856500BE4520 /* Control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C38268291FB5856500BE4520 /* Control.cpp */; };
+		C382682E1FB5873600BE4520 /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C382682C1FB5873600BE4520 /* StateMachine.cpp */; };
 		C3F9B54B1FB54FD000A2944D /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3F9B54A1FB54FD000A2944D /* ResourcePath.mm */; };
 		C3F9B54E1FB54FD000A2944D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F9B54D1FB54FD000A2944D /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C38268291FB5856500BE4520 /* Control.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Control.cpp; sourceTree = "<group>"; };
+		C382682A1FB5856500BE4520 /* Control.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Control.hpp; sourceTree = "<group>"; };
+		C382682C1FB5873600BE4520 /* StateMachine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StateMachine.cpp; sourceTree = "<group>"; };
+		C382682D1FB5873600BE4520 /* StateMachine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StateMachine.hpp; sourceTree = "<group>"; };
 		C3F9B5451FB54FD000A2944D /* ProjectRuby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRuby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F9B5491FB54FD000A2944D /* ProjectRuby-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProjectRuby-Info.plist"; sourceTree = "<group>"; };
 		C3F9B54A1FB54FD000A2944D /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -52,6 +58,10 @@
 				C3F9B54A1FB54FD000A2944D /* ResourcePath.mm */,
 				C3F9B54C1FB54FD000A2944D /* ResourcePath.hpp */,
 				C3F9B54D1FB54FD000A2944D /* main.cpp */,
+				C38268291FB5856500BE4520 /* Control.cpp */,
+				C382682C1FB5873600BE4520 /* StateMachine.cpp */,
+				C382682D1FB5873600BE4520 /* StateMachine.hpp */,
+				C382682A1FB5856500BE4520 /* Control.hpp */,
 				C3F9B54F1FB54FD000A2944D /* Resources */,
 				C3F9B5481FB54FD000A2944D /* Supporting Files */,
 			);
@@ -159,6 +169,8 @@
 			files = (
 				C3F9B54E1FB54FD000A2944D /* main.cpp in Sources */,
 				C3F9B54B1FB54FD000A2944D /* ResourcePath.mm in Sources */,
+				C382682B1FB5856500BE4520 /* Control.cpp in Sources */,
+				C382682E1FB5873600BE4520 /* StateMachine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +302,7 @@
 				C3F9B55C1FB54FD000A2944D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
