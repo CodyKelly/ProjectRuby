@@ -9,20 +9,22 @@
 
 class State
 {
-protected:
+private:
     bool done = false;
     bool exit = false;
-private:
     std::string next;
     std::string name;
     GameData gameData;
 public:
     State(std::string);
-    virtual void update(std::vector<sf::Event>) = 0;
-    virtual void draw(sf::RenderWindow&) = 0;
+    virtual void update(std::vector<sf::Event>);
+    virtual void draw(sf::RenderWindow&);
     bool get_done() const { return done; }
+    void set_done() { done = true; }
     bool get_exit() const { return exit; }
+    void set_exit() { exit = true; }
     std::string get_next() const { return next; }
+    void set_next(std::string n) { next = n; }
     std::string get_name() const { return name; }
     void set_gameData(GameData data) { gameData = data; }
     GameData get_gameData() const { return gameData; }

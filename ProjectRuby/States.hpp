@@ -19,4 +19,12 @@ private:
     sf::CircleShape circle;
 };
 
+class TestState : public State
+{
+    void draw(sf::RenderWindow&) override;
+    
+public:
+    inline TestState() : State("TEST") { }
+};
+
 #endif /* States_hpp */

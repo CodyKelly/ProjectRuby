@@ -3,6 +3,8 @@
 #include "StateMachine.hpp"
 
 State::State(std::string n) : name(n) { }
+void State::update(std::vector<sf::Event>) { }
+void State::draw(sf::RenderWindow&) { }
 
 void StateMachine::setupStates(std::vector<State *> newStates, State *initialState)
 {
