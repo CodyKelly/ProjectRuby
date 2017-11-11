@@ -17,6 +17,7 @@ private:
     StateMachine stateMachine;
     std::pair<int, int> screenSize;
     sf::RenderWindow window;
+    void renderingThread();
 };
 
 #endif /* Control_hpp */

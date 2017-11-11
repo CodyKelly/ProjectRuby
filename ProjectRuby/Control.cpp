@@ -3,6 +3,17 @@
 
 #include "Control.hpp"
 
+void Control::renderingThread()
+{
+    // We can skip drawing if the program is done
+    while (!finished)
+    {
+        window.clear();
+        stateMachine.draw(window);
+        window.display();
+    }
+}
+
 Control::Control()
 {
     screenSize = std::pair<int, int>(800, 600);
@@ -17,6 +28,12 @@ void Control::setupStates(std::vector<State *> states, State *initialState)
 void Control::main()
 {
     window.setFramerateLimit(frameRateLimit);
+    
+    window.setActive(false);
+    
+    sf::Thread thread(&Control::renderingThread, this);
+    
+    thread.launch();
     
     while (!finished)
     {
@@ -41,12 +58,6 @@ void Control::main()
                 window.close();
                 finished = true;
             }
-        }
-        
-        // We can skip drawing if the program is done
-        if (!finished)
-        {
-            stateMachine.draw(window);
         }
     }
 }
