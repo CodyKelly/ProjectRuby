@@ -1,13 +1,43 @@
 #include <iostream>
+#include <vector>
 
 #include "Control.hpp"
+
+Control::Control()
+{
+    screenSize = std::pair<int, int>(800, 600);
+    window.create(sf::VideoMode(screenSize.first, screenSize.second), "Project Ruby");
+}
+
+void Control::setupStates(std::vector<State *> states, State *initialState)
+{
+    stateMachine.setupStates(states, initialState);
+}
 
 void Control::main()
 {
     while (!finished)
     {
-        stateMachine.update();
+        // Create vector to hold events
+        std::vector<sf::Event> events;
+        sf::Event event;
+        
+        while(window.pollEvent(event))
+        {
+            events.push_back(event);
+        }
+        
+        stateMachine.update(events);
         
         finished = stateMachine.get_done();
+        
+        for (auto e : events)
+        {
+            if (e.type == sf::Event::Closed)
+            {
+                window.close();
+                finished = true;
+            }
+        }
     }
 }

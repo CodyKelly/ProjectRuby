@@ -3,27 +3,32 @@
 
 #include "StateMachine.hpp"
 
-void StateMachine::update()
+State::State(std::string n) : name(n) { }
+
+void StateMachine::setupStates(std::vector<State *> newStates, State *initialState)
 {
-    while (!done)
+    states = newStates;
+    currentState = initialState;
+}
+
+void StateMachine::update(std::vector<sf::Event> events)
+{
+    try
     {
-        try
+        currentState -> update(events);
+        
+        if (currentState -> get_done())
         {
-            currentState -> update();
-            
-            if (currentState -> get_done())
-            {
-                currentState = currentState -> get_next();
-            }
-            
-            if (currentState -> get_exit())
-            {
-                done = true;
-            }
+            currentState = currentState -> get_next();
         }
-        catch (const std::exception& e)
+        
+        if (currentState -> get_exit())
         {
-            std::cerr << "Exception thrown: " << e.what() << std::endl;
+            done = true;
         }
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << "Exception thrown: " << e.what() << std::endl;
     }
 }

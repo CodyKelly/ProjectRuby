@@ -11,7 +11,6 @@
 		C3423F851FB77B4F00424EF2 /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3423F831FB77B4F00424EF2 /* Tools.cpp */; };
 		C382682B1FB5856500BE4520 /* Control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C38268291FB5856500BE4520 /* Control.cpp */; };
 		C382682E1FB5873600BE4520 /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C382682C1FB5873600BE4520 /* StateMachine.cpp */; };
-		C3F9B54B1FB54FD000A2944D /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3F9B54A1FB54FD000A2944D /* ResourcePath.mm */; };
 		C3F9B54E1FB54FD000A2944D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F9B54D1FB54FD000A2944D /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +25,6 @@
 		C382682D1FB5873600BE4520 /* StateMachine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StateMachine.hpp; sourceTree = "<group>"; };
 		C3F9B5451FB54FD000A2944D /* ProjectRuby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRuby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F9B5491FB54FD000A2944D /* ProjectRuby-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProjectRuby-Info.plist"; sourceTree = "<group>"; };
-		C3F9B54A1FB54FD000A2944D /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
-		C3F9B54C1FB54FD000A2944D /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
 		C3F9B54D1FB54FD000A2944D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,8 +58,6 @@
 		C3F9B5471FB54FD000A2944D /* ProjectRuby */ = {
 			isa = PBXGroup;
 			children = (
-				C3F9B54A1FB54FD000A2944D /* ResourcePath.mm */,
-				C3F9B54C1FB54FD000A2944D /* ResourcePath.hpp */,
 				C3F9B54D1FB54FD000A2944D /* main.cpp */,
 				C38268291FB5856500BE4520 /* Control.cpp */,
 				C382682C1FB5873600BE4520 /* StateMachine.cpp */,
@@ -178,7 +173,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3F9B54E1FB54FD000A2944D /* main.cpp in Sources */,
-				C3F9B54B1FB54FD000A2944D /* ResourcePath.mm in Sources */,
 				C382682B1FB5856500BE4520 /* Control.cpp in Sources */,
 				C3423F851FB77B4F00424EF2 /* Tools.cpp in Sources */,
 				C3423F821FB6441A00424EF2 /* States.cpp in Sources */,

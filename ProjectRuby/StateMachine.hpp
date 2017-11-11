@@ -2,6 +2,8 @@
 #define StateMachine_hpp
 
 #include <string>
+#include <SFML/Window.hpp>
+#include <vector>
 
 class State
 {
@@ -11,7 +13,8 @@ private:
     State* next = nullptr;
     std::string name;
 public:
-    virtual void update() = 0;
+    State(std::string);
+    virtual void update(std::vector<sf::Event>) = 0;
     virtual void draw() = 0;
     bool get_done() { return done; }
     bool get_exit() { return exit; }
@@ -23,11 +26,13 @@ class StateMachine
 private:
     State* currentState;
     bool done = false;
+    std::vector<State*> states;
     
 public:
-    void update();
+    void update(std::vector<sf::Event>);
     void draw();
     bool get_done() { return done; }
+    void setupStates(std::vector<State*> states, State* initialState);
 };
 
 #endif /* StateMachine_hpp */
