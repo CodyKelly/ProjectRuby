@@ -6,6 +6,8 @@ void Control::main()
 {
     while (!finished)
     {
-        finished = true;
+        stateMachine.update();
+        
+        finished = stateMachine.get_done();
     }
 }
