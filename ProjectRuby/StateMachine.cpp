@@ -1,4 +1,3 @@
-#include <exception>
 #include <iostream>
 
 #include "StateMachine.hpp"
@@ -19,7 +18,7 @@ void StateMachine::update(std::vector<sf::Event> events)
         
         if (currentState -> get_done())
         {
-            currentState = currentState -> get_next();
+            switchState();
         }
         
         if (currentState -> get_exit())
@@ -42,5 +41,22 @@ void StateMachine::draw(sf::RenderWindow &window)
     catch (const std::exception& e)
     {
         std::cerr << "Exception thrown: " << e.what() << std::endl;
+    }
+}
+
+void StateMachine::switchState()
+{
+    std::string nextState = currentState->get_next();
+    
+    for (auto state : states)
+    {
+        if (state->get_name() == nextState)
+        {
+            // Set next state to current and move game data to
+            // the now-current state
+            GameData persistantData = currentState->get_gameData();
+            currentState = state;
+            currentState->set_gameData(persistantData);
+        }
     }
 }

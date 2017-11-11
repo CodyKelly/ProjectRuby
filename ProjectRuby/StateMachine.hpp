@@ -5,20 +5,27 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 
+#include "Tools.hpp"
+
 class State
 {
-private:
+protected:
     bool done = false;
     bool exit = false;
-    State* next = nullptr;
+private:
+    std::string next;
     std::string name;
+    GameData gameData;
 public:
     State(std::string);
     virtual void update(std::vector<sf::Event>) = 0;
     virtual void draw(sf::RenderWindow&) = 0;
     bool get_done() const { return done; }
     bool get_exit() const { return exit; }
-    State* get_next() { return next; }
+    std::string get_next() const { return next; }
+    std::string get_name() const { return name; }
+    void set_gameData(GameData data) { gameData = data; }
+    GameData get_gameData() const { return gameData; }
 };
 
 class StateMachine
@@ -27,6 +34,7 @@ private:
     State* currentState;
     bool done = false;
     std::vector<State*> states;
+    void switchState();
     
 public:
     void update(std::vector<sf::Event>);

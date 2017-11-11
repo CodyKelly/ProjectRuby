@@ -1,6 +1,12 @@
 #ifndef Tools_hpp
 #define Tools_hpp
 
-struct GameData;
+class GameData
+{
+    
+    
+public:
+    
+};
 
 #endif /* Tools_hpp */

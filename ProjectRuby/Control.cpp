@@ -8,7 +8,7 @@ void Control::renderingThread()
     // We can skip drawing if the program is done
     while (!finished)
     {
-        window.clear();
+        window.clear(sf::Color::White);
         stateMachine.draw(window);
         window.display();
     }
