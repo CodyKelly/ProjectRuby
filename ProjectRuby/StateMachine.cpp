@@ -32,3 +32,15 @@ void StateMachine::update(std::vector<sf::Event> events)
         std::cerr << "Exception thrown: " << e.what() << std::endl;
     }
 }
+
+void StateMachine::draw(sf::RenderWindow &window)
+{
+    try
+    {
+        currentState -> draw(window);
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << "Exception thrown: " << e.what() << std::endl;
+    }
+}

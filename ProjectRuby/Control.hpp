@@ -2,7 +2,7 @@
 #define Control_hpp
 
 #include "StateMachine.hpp"
-#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
 
 class Control
 {
@@ -12,10 +12,11 @@ public:
     void setupStates(std::vector<State*> states, State* initialState);
     
 private:
+    unsigned int frameRateLimit = 60;
     bool finished = false;
     StateMachine stateMachine;
     std::pair<int, int> screenSize;
-    sf::Window window;
+    sf::RenderWindow window;
 };
 
 #endif /* Control_hpp */

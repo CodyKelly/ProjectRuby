@@ -7,7 +7,7 @@ void MainMenu::update(std::vector<sf::Event> events)
     
 }
 
-void MainMenu::draw()
+void MainMenu::draw(sf::RenderWindow& window)
 {
     
 }

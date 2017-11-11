@@ -16,12 +16,15 @@ void Control::setupStates(std::vector<State *> states, State *initialState)
 
 void Control::main()
 {
+    window.setFramerateLimit(frameRateLimit);
+    
     while (!finished)
     {
         // Create vector to hold events
         std::vector<sf::Event> events;
         sf::Event event;
         
+        // Populate event vector
         while(window.pollEvent(event))
         {
             events.push_back(event);
@@ -38,6 +41,12 @@ void Control::main()
                 window.close();
                 finished = true;
             }
+        }
+        
+        // We can skip drawing if the program is done
+        if (!finished)
+        {
+            stateMachine.draw(window);
         }
     }
 }

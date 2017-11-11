@@ -11,7 +11,7 @@ class MainMenu : public State
 public:
     MainMenu();
     void update(std::vector<sf::Event>) override;
-    void draw() override;
+    void draw(sf::RenderWindow&) override;
 private:
     
 };

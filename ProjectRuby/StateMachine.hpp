@@ -2,7 +2,7 @@
 #define StateMachine_hpp
 
 #include <string>
-#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
 #include <vector>
 
 class State
@@ -15,9 +15,9 @@ private:
 public:
     State(std::string);
     virtual void update(std::vector<sf::Event>) = 0;
-    virtual void draw() = 0;
-    bool get_done() { return done; }
-    bool get_exit() { return exit; }
+    virtual void draw(sf::RenderWindow&) = 0;
+    bool get_done() const { return done; }
+    bool get_exit() const { return exit; }
     State* get_next() { return next; }
 };
 
@@ -30,8 +30,8 @@ private:
     
 public:
     void update(std::vector<sf::Event>);
-    void draw();
-    bool get_done() { return done; }
+    void draw(sf::RenderWindow&);
+    bool get_done() const { return done; }
     void setupStates(std::vector<State*> states, State* initialState);
 };
 
