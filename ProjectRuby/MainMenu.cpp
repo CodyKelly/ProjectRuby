@@ -1,4 +1,4 @@
-#include "States.hpp"
+#include "MainMenu.hpp"
 
 MainMenu::MainMenu() : State("MAINMENU")
 {
@@ -20,11 +20,6 @@ void MainMenu::draw(sf::RenderWindow& window)
     if (circlePos.second < -600)
     {
         set_done();
-        set_next("TEST");
+        set_next("GAME");
     }
-}
-
-void TestState::draw(sf::RenderWindow &window)
-{
-    window.clear(sf::Color::Green);
 }

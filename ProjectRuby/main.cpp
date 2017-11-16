@@ -1,13 +1,14 @@
 #include <vector>
 
 #include "Control.hpp"
-#include "States.hpp"
+#include "MainMenu.hpp"
+#include "Game.hpp"
 
 int main()
 {
     Control control;
     
-    std::vector<State*> states = { new MainMenu(), new TestState() };
+    std::vector<State*> states = { new MainMenu(), new Game() };
     
     control.setupStates(states, states[0]);
     

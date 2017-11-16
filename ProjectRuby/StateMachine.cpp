@@ -2,10 +2,6 @@
 
 #include "StateMachine.hpp"
 
-State::State(std::string n) : name(n) { }
-void State::update(std::vector<sf::Event>) { }
-void State::draw(sf::RenderWindow&) { }
-
 void StateMachine::setupStates(std::vector<State *> newStates, State *initialState)
 {
     states = newStates;
@@ -56,9 +52,11 @@ void StateMachine::switchState()
         {
             // Set next state to current and move game data to
             // the now-current state
-            GameData persistantData = currentState->get_gameData();
+            currentState -> on_exit();
+            GameData persistantData = currentState -> get_gameData();
             currentState = state;
-            currentState->set_gameData(persistantData);
+            currentState -> set_gameData(persistantData);
+            currentState -> on_enter();
         }
     }
 }

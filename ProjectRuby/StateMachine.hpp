@@ -7,6 +7,8 @@
 
 #include "Tools.hpp"
 
+
+
 class State
 {
 private:
@@ -15,10 +17,14 @@ private:
     std::string next;
     std::string name;
     GameData gameData;
+protected:
+    virtual void on_enter() { }
+    virtual void on_exit() { }
 public:
-    State(std::string);
-    virtual void update(std::vector<sf::Event>);
-    virtual void draw(sf::RenderWindow&);
+    State(std::string n) : name(n) { }
+    friend class StateMachine;
+    virtual void update(std::vector<sf::Event>) { }
+    virtual void draw(sf::RenderWindow&) { }
     bool get_done() const { return done; }
     void set_done() { done = true; }
     bool get_exit() const { return exit; }

@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C3423F821FB6441A00424EF2 /* States.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3423F801FB6441A00424EF2 /* States.cpp */; };
+		C302A9A41FBD3A3A00E94F76 /* FastNoise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C302A9A21FBD3A3A00E94F76 /* FastNoise.cpp */; };
 		C3423F851FB77B4F00424EF2 /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3423F831FB77B4F00424EF2 /* Tools.cpp */; };
 		C382682B1FB5856500BE4520 /* Control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C38268291FB5856500BE4520 /* Control.cpp */; };
 		C382682E1FB5873600BE4520 /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C382682C1FB5873600BE4520 /* StateMachine.cpp */; };
 		C3F9B54E1FB54FD000A2944D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F9B54D1FB54FD000A2944D /* main.cpp */; };
+		C3FA78A11FBD400900BD6955 /* MainMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3FA789F1FBD400900BD6955 /* MainMenu.cpp */; };
+		C3FA78A41FBD405E00BD6955 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3FA78A21FBD405E00BD6955 /* Game.cpp */; };
+		C3FA78A91FBD430300BD6955 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3FA78A71FBD430300BD6955 /* World.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C3423F801FB6441A00424EF2 /* States.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = States.cpp; sourceTree = "<group>"; };
-		C3423F811FB6441A00424EF2 /* States.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = States.hpp; sourceTree = "<group>"; };
+		C302A9A21FBD3A3A00E94F76 /* FastNoise.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FastNoise.cpp; sourceTree = "<group>"; };
+		C302A9A31FBD3A3A00E94F76 /* FastNoise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastNoise.h; sourceTree = "<group>"; };
 		C3423F831FB77B4F00424EF2 /* Tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tools.cpp; sourceTree = "<group>"; };
 		C3423F841FB77B4F00424EF2 /* Tools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tools.hpp; sourceTree = "<group>"; };
 		C38268291FB5856500BE4520 /* Control.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Control.cpp; sourceTree = "<group>"; };
@@ -26,6 +29,12 @@
 		C3F9B5451FB54FD000A2944D /* ProjectRuby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRuby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F9B5491FB54FD000A2944D /* ProjectRuby-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProjectRuby-Info.plist"; sourceTree = "<group>"; };
 		C3F9B54D1FB54FD000A2944D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C3FA789F1FBD400900BD6955 /* MainMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenu.cpp; sourceTree = "<group>"; };
+		C3FA78A01FBD400900BD6955 /* MainMenu.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MainMenu.hpp; sourceTree = "<group>"; };
+		C3FA78A21FBD405E00BD6955 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		C3FA78A31FBD405E00BD6955 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		C3FA78A71FBD430300BD6955 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
+		C3FA78A81FBD430300BD6955 /* World.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = World.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C302A9A51FBD3C4300E94F76 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				C3FA789F1FBD400900BD6955 /* MainMenu.cpp */,
+				C3FA78A01FBD400900BD6955 /* MainMenu.hpp */,
+				C3FA78A21FBD405E00BD6955 /* Game.cpp */,
+				C3FA78A31FBD405E00BD6955 /* Game.hpp */,
+			);
+			name = States;
+			sourceTree = "<group>";
+		};
 		C3F9B53B1FB54FD000A2944D = {
 			isa = PBXGroup;
 			children = (
@@ -58,17 +78,14 @@
 		C3F9B5471FB54FD000A2944D /* ProjectRuby */ = {
 			isa = PBXGroup;
 			children = (
+				C3FA78A61FBD42EA00BD6955 /* Objects */,
+				C3FA78A51FBD410300BD6955 /* Base */,
+				C302A9A51FBD3C4300E94F76 /* States */,
+				C302A9A21FBD3A3A00E94F76 /* FastNoise.cpp */,
+				C302A9A31FBD3A3A00E94F76 /* FastNoise.h */,
 				C3F9B54D1FB54FD000A2944D /* main.cpp */,
-				C38268291FB5856500BE4520 /* Control.cpp */,
-				C382682C1FB5873600BE4520 /* StateMachine.cpp */,
-				C382682D1FB5873600BE4520 /* StateMachine.hpp */,
-				C382682A1FB5856500BE4520 /* Control.hpp */,
 				C3F9B54F1FB54FD000A2944D /* Resources */,
 				C3F9B5481FB54FD000A2944D /* Supporting Files */,
-				C3423F801FB6441A00424EF2 /* States.cpp */,
-				C3423F811FB6441A00424EF2 /* States.hpp */,
-				C3423F831FB77B4F00424EF2 /* Tools.cpp */,
-				C3423F841FB77B4F00424EF2 /* Tools.hpp */,
 			);
 			path = ProjectRuby;
 			sourceTree = "<group>";
@@ -86,6 +103,28 @@
 			children = (
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		C3FA78A51FBD410300BD6955 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C38268291FB5856500BE4520 /* Control.cpp */,
+				C382682C1FB5873600BE4520 /* StateMachine.cpp */,
+				C382682D1FB5873600BE4520 /* StateMachine.hpp */,
+				C382682A1FB5856500BE4520 /* Control.hpp */,
+				C3423F831FB77B4F00424EF2 /* Tools.cpp */,
+				C3423F841FB77B4F00424EF2 /* Tools.hpp */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		C3FA78A61FBD42EA00BD6955 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C3FA78A71FBD430300BD6955 /* World.cpp */,
+				C3FA78A81FBD430300BD6955 /* World.hpp */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,8 +213,11 @@
 			files = (
 				C3F9B54E1FB54FD000A2944D /* main.cpp in Sources */,
 				C382682B1FB5856500BE4520 /* Control.cpp in Sources */,
+				C3FA78A91FBD430300BD6955 /* World.cpp in Sources */,
 				C3423F851FB77B4F00424EF2 /* Tools.cpp in Sources */,
-				C3423F821FB6441A00424EF2 /* States.cpp in Sources */,
+				C3FA78A41FBD405E00BD6955 /* Game.cpp in Sources */,
+				C302A9A41FBD3A3A00E94F76 /* FastNoise.cpp in Sources */,
+				C3FA78A11FBD400900BD6955 /* MainMenu.cpp in Sources */,
 				C382682E1FB5873600BE4520 /* StateMachine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

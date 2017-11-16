@@ -1,10 +1,8 @@
-#ifndef States_hpp
-#define States_hpp
+#ifndef MainMenu_hpp
+#define MainMenu_hpp
 
 #include <StateMachine.hpp>
-#include <string>
 #include <SFML/Window.hpp>
-#include <vector>
 
 class MainMenu : public State
 {
@@ -19,12 +17,4 @@ private:
     sf::CircleShape circle;
 };
 
-class TestState : public State
-{
-    void draw(sf::RenderWindow&) override;
-    
-public:
-    inline TestState() : State("TEST") { }
-};
-
-#endif /* States_hpp */
+#endif /* MainMenu_hpp */
