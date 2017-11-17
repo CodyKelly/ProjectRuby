@@ -1,0 +1,31 @@
+<Map>
+    <Name>Default</Name>
+    <Width>100</Width>
+    <Height>100</Height>
+    <Layer>
+        <Name>Heightmap</Name>
+        <Type>Perlin</Type>
+        <!--
+         Types can be:
+         - Value
+         - ValueFractal
+         - Perlin
+         - PerlinFractal
+         - Simplex
+         - SimplexFractal
+         - Cellular
+         - WhiteNoise
+         - Cubic
+         - CubicFractal
+         -->
+        <Defseed>1994</Defseed>
+        <Freq>.02</Freq>
+        <Interp>Quintic</Interp>
+        <!-- 
+         Possible interpolation values -
+         These are listed from lowest to highest quality:
+         - Linear
+         - Hermite
+         - Quintic
+         -->
+</Map>
