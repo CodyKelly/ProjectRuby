@@ -6,6 +6,7 @@ void StateMachine::setupStates(std::vector<State *> newStates, State *initialSta
 {
     states = newStates;
     currentState = initialState;
+    currentState -> on_enter();
 }
 
 void StateMachine::update(std::vector<sf::Event> events)

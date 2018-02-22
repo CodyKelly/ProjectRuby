@@ -1,8 +1,9 @@
 #ifndef Control_hpp
 #define Control_hpp
 
-#include "StateMachine.hpp"
 #include <SFML/Graphics.hpp>
+#include "StateMachine.hpp"
+#include "State.hpp"
 
 class Control
 {
