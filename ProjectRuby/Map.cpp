@@ -37,3 +37,8 @@ int Map::lookupTile(float height)
 {
     return 1;
 }
+
+void Map::draw(sf::RenderTarget &target, sf::RenderStates states) const
+{
+    
+}

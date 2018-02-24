@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C3F9B54E1FB54FD000A2944D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F9B54D1FB54FD000A2944D /* main.cpp */; };
+		E928CF952042082D000D1CD8 /* AnimatedTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E928CF932042082D000D1CD8 /* AnimatedTexture.cpp */; };
+		E928CF9820420B01000D1CD8 /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = E928CF9720420B01000D1CD8 /* grass.png */; };
 		E934BB7E2040A4AB009F2B17 /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E934BB7D2040A4AB009F2B17 /* pugixml.cpp */; };
 		E9EFFCCA203F48D50023E037 /* Control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9EFFCBA203F48D40023E037 /* Control.cpp */; };
 		E9EFFCCB203F48D50023E037 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9EFFCBB203F48D40023E037 /* ResourcePath.mm */; };
@@ -23,6 +25,9 @@
 		C3F9B5451FB54FD000A2944D /* ProjectRuby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRuby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F9B5491FB54FD000A2944D /* ProjectRuby-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProjectRuby-Info.plist"; sourceTree = "<group>"; };
 		C3F9B54D1FB54FD000A2944D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E928CF932042082D000D1CD8 /* AnimatedTexture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AnimatedTexture.cpp; sourceTree = "<group>"; };
+		E928CF942042082D000D1CD8 /* AnimatedTexture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AnimatedTexture.hpp; sourceTree = "<group>"; };
+		E928CF9720420B01000D1CD8 /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass.png; sourceTree = "<group>"; };
 		E934BB7B2040A4AB009F2B17 /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugixml.hpp; sourceTree = "<group>"; };
 		E934BB7C2040A4AB009F2B17 /* pugiconfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugiconfig.hpp; sourceTree = "<group>"; };
 		E934BB7D2040A4AB009F2B17 /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pugixml.cpp; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		C3F9B5471FB54FD000A2944D /* ProjectRuby */ = {
 			isa = PBXGroup;
 			children = (
+				E928CF9620420AF1000D1CD8 /* Resources */,
 				E9EFFCD4203F492A0023E037 /* Tools */,
 				E9EFFCD3203F49180023E037 /* States */,
 				E934BB7F2040A52C009F2B17 /* Objects */,
@@ -90,6 +96,14 @@
 				C3F9B5491FB54FD000A2944D /* ProjectRuby-Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E928CF9620420AF1000D1CD8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E928CF9720420B01000D1CD8 /* grass.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		E934BB7F2040A52C009F2B17 /* Objects */ = {
@@ -129,6 +143,8 @@
 				E9EFFCC4203F48D50023E037 /* Tools.cpp */,
 				E9EFFCBF203F48D50023E037 /* Tools.hpp */,
 				E9EFFCD5203F55120023E037 /* State.hpp */,
+				E928CF932042082D000D1CD8 /* AnimatedTexture.cpp */,
+				E928CF942042082D000D1CD8 /* AnimatedTexture.hpp */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -191,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E928CF9820420B01000D1CD8 /* grass.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +240,7 @@
 				E9EFFCCC203F48D50023E037 /* Map.cpp in Sources */,
 				E9EFFCCE203F48D50023E037 /* Tools.cpp in Sources */,
 				E9EFFCD1203F48D50023E037 /* FastNoise.cpp in Sources */,
+				E928CF952042082D000D1CD8 /* AnimatedTexture.cpp in Sources */,
 				E9EFFCCA203F48D50023E037 /* Control.cpp in Sources */,
 				E9EFFCCD203F48D50023E037 /* MainMenu.cpp in Sources */,
 				E9EFFCCF203F48D50023E037 /* Game.cpp in Sources */,
